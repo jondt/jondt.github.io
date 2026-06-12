@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #f8f7f4;
+      --text: #1a1a1a;
+      --muted: #999;
+      --accent: #3a5a8c;
+      --hover-line: #3a5a8c;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      gap: 2.8rem;
+      text-align: center;
+    }
+
+    a {
+      font-size: clamp(2rem, 6vw, 3.6rem);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--text);
+      position: relative;
+      display: inline-block;
+      transition: color 0.25s ease;
+    }
+
+    a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 1px;
+      background: var(--hover-line);
+      transition: width 0.3s ease;
+    }
+
+    a:hover {
+      color: var(--accent);
+    }
+
+    a:hover::after {
+      width: 100%;
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 6px;
+      border-radius: 2px;
+    }
+
+    .divider {
+      width: 1px;
+      height: 1.4rem;
+      background: var(--muted);
+      margin: 0 auto;
+      opacity: 0.4;
+    }
+  </style>
+</head>
+<body>
+  <nav aria-label="Main">
+    <a href="index2.html">Work</a>
+    <div class="divider" aria-hidden="true"></div>
+    <a href="https://www.lds.org" target="_blank" rel="noopener">Church</a>
+    <div class="divider" aria-hidden="true"></div>
+    <a href="index3.html">Fun</a>
+  </nav>
+</body>
+</html>
