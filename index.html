@@ -93,7 +93,7 @@ html_content = """<!DOCTYPE html>
 <body>
 
     <main>
-#        <div class="logo">JTJ</div>
+'        <div class="logo">JTJ</div>  '
         
         <h1>Some details.<br>More clarity.</h1>
         
@@ -109,9 +109,3 @@ html_content = """<!DOCTYPE html>
 </body>
 </html>
 """
-
-file_path = "index.html"
-with open(file_path, "w", encoding="utf-8") as f:
-    f.write(html_content)
-
-print(f"File written successfully to {file_path}")
