@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>lunch</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fafafa;
+      --text: #181818;
+      --muted: #777;
+      --border: #e5e5e5;
+      --card: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    main {
+      width: min(94vw, 1120px);
+      padding: 64px 24px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 6vw, 4rem);
+      font-weight: 500;
+      letter-spacing: -0.06em;
+    }
+
+    p {
+      margin: 0 auto 40px;
+      max-width: 620px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .image-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    .image-link {
+      flex: 1 1 280px;
+      max-width: 340px;
+      display: block;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      color: inherit;
+      text-decoration: none;
+      background: var(--card);
+      transition: transform 160ms ease, border-color 160ms ease;
+    }
+
+    .image-link:hover,
+    .image-link:focus-visible {
+      transform: translateY(-3px);
+      border-color: #aaa;
+      outline: none;
+    }
+
+    .image-link img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background: #f1f1f1;
+    }
+
+    .caption {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 16px 16px;
+      text-align: left;
+    }
+
+    .number {
+      color: var(--muted);
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .label {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    @media (max-width: 720px) {
+      main {
+        padding: 48px 18px;
+      }
+
+      .image-link {
+        flex-basis: min(100%, 360px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>old school lunch</h1>
+    <p>circa ~2015</p>
+
+    <nav class="image-links" aria-label="Image links">
+      <a class="image-link" href="cvida.jpg">
+        <img src="cvida.jpg" alt="Costa Vida" />
+      </a>
+
+      <a class="image-link" href="image-2.jpg">
+        <img src="tori.gif" alt="Red Iguana (A Taste Of)" />
+      </a>
+
+      <a class="image-link" href="image-3.jpg">
+        <img src="rumbi.jpg" alt="Rumbi Grill" />
+      </a>
+    </nav>
+  </main>
+</body>
+</html>
